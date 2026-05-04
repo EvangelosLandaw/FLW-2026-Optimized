@@ -274,6 +274,7 @@ p{color:var(--muted);line-height:1.7;font-size:18px;}
 /* ── MOBILE FIXES ─────────────────────────────────── */
 @media(max-width:768px){
   :root{--nav-h:84px;}
+  .divider{padding:16px;}
   /* Navigation */
   .nav-wordmark{font-size:clamp(17px,3.6vw,22px);}
   .nav-sub{font-size:clamp(12px,1.5vw,14px);}
