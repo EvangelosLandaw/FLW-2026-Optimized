@@ -371,6 +371,7 @@ p{color:var(--muted);line-height:1.7;font-size:18px;}
   .final-btns .btn{width:100%;max-width:320px;justify-content:center;}
   
   /* Footer - Major Centering Improvements */
+  .footer{margin-top:40px;}
   .footer-inner{padding:40px 16px 24px;text-align:center;}
   .footer-row1{flex-direction:column;align-items:center;text-align:center;gap:32px;}
   
