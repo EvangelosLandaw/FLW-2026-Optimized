@@ -146,7 +146,6 @@ p{color:var(--muted);line-height:1.7;font-size:16px;}
 .nl-input::placeholder{color:#5A3820;}
 .nl-btn{background:var(--red);color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:12px 20px;border-radius:2px;white-space:nowrap;border:none;cursor:pointer;}
 .nl-btn:hover{background:var(--red-l);}
-.nl-honey{position:absolute;left:-9999px;width:1px;height:1px;opacity:0;pointer-events:none;}
 /* FINAL CTA */
 .final-cta{background:var(--surf);border-top:3px solid var(--gold);padding:100px 0;text-align:center;position:relative;overflow:hidden;}
 .final-crosshair{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:480px;height:480px;opacity:.05;pointer-events:none;}
@@ -537,13 +536,10 @@ p{color:var(--muted);line-height:1.7;font-size:16px;}
         <div class="nl-h2">Fully Loaded WEBletter</div>
         <p class="nl-sub">Sign up for the Fully Loaded WEBletter and receive a free action plan on using AI safely for your business.</p>
       </div>
-      <form class="nl-form reveal reveal-d2" action="https://formsubmit.co/evan@arthurlandawgroup.com" method="POST">
-        <input type="hidden" name="_subject" value="FLW — WEBletter signup (Blog)" />
-        <input type="hidden" name="_next" value="https://fullyloadedwebsites.com/Blog.html?thanks=1" />
-        <input type="text" name="_honey" class="nl-honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <input class="nl-input" id="nl-email" name="email" type="email" required placeholder="Your email address" autocomplete="email" aria-label="Email for WEBletter" />
-        <button type="submit" class="nl-btn">Subscribe →</button>
-      </form>
+      <div class="nl-form reveal reveal-d2">
+        <input class="nl-input" type="email" placeholder="Your email address" />
+        <button class="nl-btn">Subscribe →</button>
+      </div>
     </div>
   </div>
 </section>
