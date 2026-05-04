@@ -97,8 +97,8 @@ p{color:var(--muted);line-height:1.7;font-size:16px;}
 .mothership-badge span{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.08em;color:#fff;}
 .mothership-grid{display:grid;grid-template-columns:1fr;gap:20px;}
 @media(min-width:640px){.mothership-grid{grid-template-columns:repeat(2,1fr);}}
-.tactic-card{background:var(--card);border:1px solid rgba(218,165,32,.15);border-top:3px solid var(--gold);border-radius:2px;padding:36px;transition:border-color .2s,transform .2s;}
-.tactic-card:hover{border-color:rgba(218,165,32,.5);transform:translateY(-4px);}
+.tactic-card{background:var(--card);border:1px solid rgba(218,165,32,.15);border-top:3px solid var(--gold);border-radius:2px;padding:36px;transition:border-color .2s,transform .2s,box-shadow .2s;}
+.tactic-card:hover{border-color:var(--card-color,rgba(218,165,32,.5));box-shadow:0 0 20px color-mix(in srgb,var(--card-color,#DAA520) 30%,transparent);transform:translateY(-4px);}
 .tactic-num{font-family:'Share Tech Mono',monospace;font-size:14px;letter-spacing:.12em;color:var(--gold);margin-bottom:12px;}
 .tactic-title{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;letter-spacing:.06em;color:var(--cream);margin-bottom:12px;}
 .tactic-body{font-size:16px;color:var(--faint);line-height:1.7;}
@@ -110,8 +110,8 @@ p{color:var(--muted);line-height:1.7;font-size:16px;}
 .matrix-grid{display:grid;grid-template-columns:1fr;gap:20px;}
 @media(min-width:640px){.matrix-grid{grid-template-columns:repeat(2,1fr);}}
 @media(min-width:1024px){.matrix-grid{grid-template-columns:repeat(3,1fr);}}
-.matrix-card{background:var(--surf);border:1px solid rgba(218,165,32,.15);border-radius:2px;padding:32px;transition:border-color .2s,transform .2s;}
-.matrix-card:hover{border-color:rgba(218,165,32,.4);transform:translateY(-3px);}
+.matrix-card{background:var(--surf);border:1px solid rgba(218,165,32,.15);border-radius:2px;padding:32px;transition:border-color .2s,transform .2s,box-shadow .2s;}
+.matrix-card:hover{border-color:var(--card-color,rgba(218,165,32,.4));box-shadow:0 0 20px color-mix(in srgb,var(--card-color,#DAA520) 30%,transparent);transform:translateY(-3px);}
 /* PRICE SECTION */
 .price-section{background:var(--gold);background-image:repeating-linear-gradient(0deg,transparent 0,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 3px);padding:80px 0;position:relative;overflow:hidden;text-align:center;}
 .price-crosshair{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:600px;height:600px;opacity:.07;pointer-events:none;}
@@ -421,22 +421,22 @@ p{color:var(--muted);line-height:1.7;font-size:16px;}
       <p style="max-width:600px;margin:0 auto;font-size:16px;">Your website is the mothership — everything else drives traffic back to it. Built fast, built right, built to rank.</p>
     </div>
     <div class="mothership-grid">
-      <div class="tactic-card reveal" style="border-top-color:var(--red);">
+      <div class="tactic-card reveal" style="border-top-color:var(--red);--card-color:var(--red);">
         <div class="tactic-num" style="color:var(--red);">01</div>
         <div class="tactic-title">Business Website</div>
         <p class="tactic-body">Your fully loaded home base — the Mothership. Mobile-first, AI-optimized, and engineered to rank in your local market. Live in under 2 weeks.</p>
       </div>
-      <div class="tactic-card reveal reveal-d1" style="border-top-color:var(--blue);">
+      <div class="tactic-card reveal reveal-d1" style="border-top-color:var(--blue);--card-color:var(--blue);">
         <div class="tactic-num" style="color:var(--blue);">02</div>
         <div class="tactic-title">Advice Blog</div>
         <p class="tactic-body">Weekly articles targeting every question your customers Google. Dominate local search and become the go-to expert in your trade.</p>
       </div>
-      <div class="tactic-card reveal reveal-d2" style="border-top-color:var(--gold);">
+      <div class="tactic-card reveal reveal-d2" style="border-top-color:var(--gold);--card-color:var(--gold);">
         <div class="tactic-num" style="color:var(--gold);">03</div>
         <div class="tactic-title">Expert Newsletter</div>
         <p class="tactic-body">Monthly email newsletter to past customers and warm leads. Keeps you top-of-mind and drives repeat business without ad spend.</p>
       </div>
-      <div class="tactic-card reveal reveal-d3" style="border-top-color:var(--green);">
+      <div class="tactic-card reveal reveal-d3" style="border-top-color:var(--green);--card-color:var(--green);">
         <div class="tactic-num" style="color:var(--green);">04</div>
         <div class="tactic-title">Success Stories</div>
         <p class="tactic-body">Detailed case studies of your best jobs. Real stories that build trust and convert visitors into calls before they even pick up the phone.</p>
@@ -454,52 +454,52 @@ p{color:var(--muted);line-height:1.7;font-size:16px;}
       <p style="max-width:600px;margin:0 auto;font-size:16px;">Each spoke in the matrix feeds leads back to your website. Together they create a compounding digital presence that gets stronger every month.</p>
     </div>
     <div class="matrix-grid">
-      <div class="matrix-card reveal" style="border-top:3px solid var(--gold);">
+      <div class="matrix-card reveal" style="border-top:3px solid var(--gold);--card-color:var(--gold);">
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--gold);margin-bottom:12px;letter-spacing:.1em;">05</div>
         <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--cream);margin-bottom:10px;">Expert Ebook</div>
         <p style="font-size:16px;color:var(--faint);line-height:1.7;">A branded PDF guide in your voice, offered as a free download. Builds your email list and establishes you as the local expert.</p>
       </div>
-      <div class="matrix-card reveal reveal-d1" style="border-top:3px solid var(--green);">
+      <div class="matrix-card reveal reveal-d1" style="border-top:3px solid var(--green);--card-color:var(--green);">
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--green);margin-bottom:12px;letter-spacing:.1em;">06</div>
         <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--cream);margin-bottom:10px;">Positive Press Release</div>
         <p style="font-size:16px;color:var(--faint);line-height:1.7;">A local press release distributed to news outlets in your area. Builds backlinks, gets your name on news sites, and boosts Google authority.</p>
       </div>
-      <div class="matrix-card reveal reveal-d2" style="border-top:3px solid #E07020;">
+      <div class="matrix-card reveal reveal-d2" style="border-top:3px solid #E07020;--card-color:#E07020;">
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:#E07020;margin-bottom:12px;letter-spacing:.1em;">07</div>
         <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--cream);margin-bottom:10px;">Video Commercial</div>
         <p style="font-size:16px;color:var(--faint);line-height:1.7;">A promotional video showcasing your business, your work, and your team. Builds instant trust with homeowners who find you online.</p>
       </div>
-      <div class="matrix-card reveal reveal-d3" style="border-top:3px solid var(--red);">
+      <div class="matrix-card reveal reveal-d3" style="border-top:3px solid var(--red);--card-color:var(--red);">
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--red-l);margin-bottom:12px;letter-spacing:.1em;">08</div>
         <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--cream);margin-bottom:10px;">SEO &amp; AIO</div>
         <p style="font-size:16px;color:var(--faint);line-height:1.7;">Full on-page SEO plus AI Optimization — so your business ranks in both traditional Google search and AI-powered queries on ChatGPT, Gemini, and Perplexity.</p>
       </div>
-      <div class="matrix-card reveal" style="border-top:3px solid var(--gold);">
+      <div class="matrix-card reveal" style="border-top:3px solid var(--gold);--card-color:var(--gold);">
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--gold);margin-bottom:12px;letter-spacing:.1em;">09</div>
         <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--cream);margin-bottom:10px;">Brilliant Backlinking</div>
         <p style="font-size:16px;color:var(--faint);line-height:1.7;">Strategic backlinks that boost your domain authority and help Google trust your site above your competitors.</p>
       </div>
-      <div class="matrix-card reveal" style="border-top:3px solid #B060E0;">
+      <div class="matrix-card reveal" style="border-top:3px solid #B060E0;--card-color:#B060E0;">
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:#B060E0;margin-bottom:12px;letter-spacing:.1em;">10</div><div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--cream);margin-bottom:10px;">Painless Social Posting</div>
         <p style="font-size:16px;color:var(--faint);line-height:1.7;">Done-for-you social media content written and scheduled on your behalf. Consistent presence on Facebook, Instagram, and Google Business.</p>
       </div>
-      <div class="matrix-card reveal reveal-d1" style="border-top:3px solid var(--blue);">
+      <div class="matrix-card reveal reveal-d1" style="border-top:3px solid var(--blue);--card-color:var(--blue);">
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--blue);margin-bottom:12px;letter-spacing:.1em;">11</div><div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--cream);margin-bottom:10px;">Gorgeous Galleries</div>
         <p style="font-size:16px;color:var(--faint);line-height:1.7;">A stunning visual portfolio of your best work. Photos sell jobs — let your work speak for itself with a gallery that loads fast and looks sharp.</p>
       </div>
-      <div class="matrix-card reveal reveal-d2" style="border-top:3px solid var(--gold);">
+      <div class="matrix-card reveal reveal-d2" style="border-top:3px solid var(--gold);--card-color:var(--gold);">
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--gold);margin-bottom:12px;letter-spacing:.1em;">12</div><div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--cream);margin-bottom:10px;">Updates &amp; Upgrades</div>
         <p style="font-size:16px;color:var(--faint);line-height:1.7;">Ongoing site maintenance, content updates, and feature upgrades included. Your site stays fresh, fast, and competitive every month.</p>
       </div>
-      <div class="matrix-card reveal reveal-d3" style="border-top:3px solid var(--blue);">
+      <div class="matrix-card reveal reveal-d3" style="border-top:3px solid var(--blue);--card-color:var(--blue);">
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--blue);margin-bottom:12px;letter-spacing:.1em;">13</div><div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--cream);margin-bottom:10px;">Domain &amp; Hosting</div>
         <p style="font-size:16px;color:var(--faint);line-height:1.7;">Domain registration and fast, secure hosting included. No hidden fees, no separate vendor to deal with — it's all handled.</p>
       </div>
-      <div class="matrix-card reveal" style="border-top:3px solid var(--green);">
+      <div class="matrix-card reveal" style="border-top:3px solid var(--green);--card-color:var(--green);">
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--green);margin-bottom:12px;letter-spacing:.1em;">14</div><div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--cream);margin-bottom:10px;">Quarterly Analytics Report</div>
         <p style="font-size:16px;color:var(--faint);line-height:1.7;">A plain-English performance report every quarter. Rankings, traffic, leads — you'll always know exactly how your investment is performing.</p>
       </div>
-      <div class="matrix-card reveal reveal-d1" style="border-top:3px solid var(--red);">
+      <div class="matrix-card reveal reveal-d1" style="border-top:3px solid var(--red);--card-color:var(--red);">
         <div style="font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--red-l);margin-bottom:12px;letter-spacing:.1em;">15</div>
         <div style="font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;color:var(--cream);margin-bottom:10px;">Reasonable Reviews</div>
         <p style="font-size:16px;color:var(--faint);line-height:1.7;">A done-for-you system that consistently asks happy customers for 5-star Google and Facebook reviews. More reviews = higher rankings = more calls.</p>
@@ -522,7 +522,7 @@ p{color:var(--muted);line-height:1.7;font-size:16px;}
   </div>
   <div class="container">
     <div class="price-inner">
-      <span style="font-family:'Share Tech Mono',monospace;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:#B01C1C;display:block;margin-bottom:12px;" class="reveal">All 15 Tools &amp; Tactics</span>
+      <span style="font-family:'Share Tech Mono',monospace;font-size:clamp(20px,3vw,28px);letter-spacing:.14em;text-transform:uppercase;color:#B01C1C;display:block;margin-bottom:12px;" class="reveal">All 15 Tools &amp; Tactics</span>
       <div class="big-price reveal reveal-d1">$999</div>
       <div class="big-price-mo reveal reveal-d1">per month</div>
       <h2 style="font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(20px,3vw,28px);text-transform:uppercase;color:#111;margin:16px 0 8px;" class="reveal reveal-d2">"All for only $999 per month?" — <em style="color:var(--red);font-style:normal;">YES.</em></h2>
@@ -562,7 +562,7 @@ p{color:var(--muted);line-height:1.7;font-size:16px;}
         </div>
       </div>
       <div>
-        <span class="eyebrow reveal">Hi, I'm Evan</span>
+        <span class="eyebrow reveal" style="font-size:18px;">Hi, I'm Evan</span>
         <h2 class="reveal reveal-d1" style="font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(22px,3vw,36px);text-transform:uppercase;margin-bottom:12px;">High Performing Digital Marketing<br/>for <em style="color:var(--red);font-style:normal;">Local Service Pros</em></h2>
         <div class="pull-quote reveal reveal-d2">
           <p class="pq-text">"I understand how frustrating it can be to find a web designer that shares your worldview &amp; values. I built FLW to serve local service professionals. Let's build something true, good &amp; beautiful!"</p>
