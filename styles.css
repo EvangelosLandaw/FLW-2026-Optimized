@@ -413,7 +413,8 @@ p{color:var(--muted);line-height:1.7;font-size:18px;}
   
   /* Images and Container */
   img{max-width:100%;}
-  .container{padding:0 16px;}
+  /* padding-inline only — full padding shorthand would override .footer-inner vertical padding */
+  .container{padding-inline:16px;}
   
   /* Sections centered text */
   .eyebrow{text-align:center;display:block;}
@@ -461,7 +462,7 @@ p{color:var(--muted);line-height:1.7;font-size:18px;}
   .socials{justify-content:center!important;margin:0 auto;display:flex!important;}
   
   /* Container even tighter */
-  .container{padding:0 12px;}
+  .container{padding-inline:12px;}
   
   /* Reduce section padding */
   .section-pad{padding:48px 0;}
