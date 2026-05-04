@@ -1,0 +1,405 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Barlow:ital,wght@0,400;0,500;1,400&family=Barlow+Condensed:wght@600;700&family=Share+Tech+Mono&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+.page{font-family:'Barlow',sans-serif;border-radius:8px;overflow:hidden;width:100%;}
+
+.nav{background:#DAA520;border-bottom:3px solid #B08010;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:12px;}
+.logo-ph{width:48px;height:48px;background:#1A0C04;border:2px dashed rgba(218,165,32,.5);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.logo-ph span{font-family:'Share Tech Mono',monospace;font-size:7px;color:#5A3800;text-align:center;line-height:1.4;text-transform:uppercase;}
+.nwt{font-family:'Oswald',sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#111;line-height:1;}
+.nwt em{color:#B01C1C;font-style:normal;}
+.nws{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#5A3800;margin-top:2px;}
+.nav-links{display:flex;gap:18px;align-items:center;}
+.nl{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#3A2800;}
+.nl.act{color:#B01C1C;}
+.n-cta{background:#B01C1C;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:6px 14px;border-radius:2px;border:2px solid #7A1010;}
+
+/* PAGE HERO */
+.page-hero{background:#2C1A0E;padding:40px 28px 32px;position:relative;overflow:hidden;text-align:center;}
+.page-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0,transparent 2px,rgba(255,255,255,.012) 2px,rgba(255,255,255,.012) 3px);pointer-events:none;}
+.ph-deco{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.05;pointer-events:none;}
+.sec-eye{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#DAA520;margin-bottom:8px;}
+.ph-h1{font-family:'Oswald',sans-serif;font-size:34px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#F5F0E8;margin-bottom:8px;position:relative;z-index:2;}
+.ph-h1 em{color:#4299FF;font-style:normal;}
+.ph-sub{font-size:13px;color:#7A6A5A;position:relative;z-index:2;max-width:520px;margin:0 auto;}
+
+/* RED STATS */
+.stats{background:#B01C1C;border-top:3px solid #7A1010;border-bottom:3px solid #7A1010;padding:14px 28px;display:grid;grid-template-columns:repeat(4,1fr);}
+.si{text-align:center;border-right:1px solid rgba(255,255,255,.2);}
+.si:last-child{border-right:none;}
+.sn{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:#fff;line-height:1;}
+.sn b{color:#DAA520;}
+.sl{font-family:'Barlow Condensed',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.55);margin-top:3px;}
+
+/* WHY BLOGGING */
+.why{background:#1A0C04;padding:36px 28px;position:relative;overflow:hidden;}
+.why::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0,transparent 2px,rgba(255,255,255,.01) 2px,rgba(255,255,255,.01) 3px);pointer-events:none;}
+.why-deco{position:absolute;right:-20px;top:50%;transform:translateY(-50%);opacity:.05;pointer-events:none;}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;position:relative;z-index:2;}
+.sec-h2{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#F5F0E8;margin-bottom:12px;}
+.sec-h2 em{color:#4299FF;font-style:normal;}
+.body-text{font-size:12px;color:#A8927A;line-height:1.75;margin-bottom:10px;}
+.pull-quote{border-left:3px solid #4299FF;padding:12px 16px;background:rgba(66,153,255,.06);border-radius:0 2px 2px 0;margin:14px 0;}
+.pq-text{font-family:'Barlow',sans-serif;font-style:italic;font-size:13px;color:#F5F0E8;line-height:1.6;}
+.why-cards{display:flex;flex-direction:column;gap:10px;}
+.why-card{background:#2C1A0E;border:1px solid rgba(66,153,255,.2);border-left:3px solid #4299FF;border-radius:0 2px 2px 0;padding:14px 16px;}
+.wc-title{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#F5F0E8;margin-bottom:4px;}
+.wc-body{font-size:11px;color:#7A6A5A;line-height:1.6;}
+
+/* FEATURED POST */
+.featured{background:#2C1A0E;padding:36px 28px;border-top:1px solid rgba(66,153,255,.15);position:relative;overflow:hidden;}
+.featured::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(0,0,0,.04) 0,transparent 1px,transparent 5px);pointer-events:none;}
+.feat-label{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:#4299FF;margin-bottom:14px;display:flex;align-items:center;gap:8px;}
+.feat-label::after{content:'';flex:1;height:1px;background:rgba(66,153,255,.2);}
+.feat-card{display:grid;grid-template-columns:1fr 260px;background:#1E0E06;border:1px solid rgba(66,153,255,.2);border-top:3px solid #4299FF;border-radius:2px;overflow:hidden;position:relative;z-index:2;}
+.feat-img{background:#111;min-height:190px;display:flex;align-items:center;justify-content:center;}
+.feat-img-lbl{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:#3A2010;text-transform:uppercase;text-align:center;}
+.feat-info{padding:20px;display:flex;flex-direction:column;justify-content:space-between;}
+.feat-meta{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.feat-tag{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;padding:2px 7px;border-radius:2px;background:rgba(66,153,255,.12);color:#4299FF;border:1px solid rgba(66,153,255,.3);}
+.feat-date{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:.08em;color:#5A4A3A;}
+.feat-title{font-family:'Oswald',sans-serif;font-size:16px;font-weight:700;text-transform:uppercase;color:#F5F0E8;margin-bottom:8px;line-height:1.2;}
+.feat-excerpt{font-size:11px;color:#7A6A5A;line-height:1.65;margin-bottom:12px;}
+.feat-link{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#4299FF;}
+
+/* BLOG GRID */
+.blog-grid-section{background:#1A0C04;padding:36px 28px;}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px;}
+.bcard{background:#2C1A0E;border:1px solid rgba(176,28,28,.18);border-radius:2px;overflow:hidden;}
+.bcard-img{height:100px;background:#111;display:flex;align-items:center;justify-content:center;position:relative;}
+.bcard-img-lbl{font-family:'Barlow Condensed',sans-serif;font-size:9px;color:#2A1808;text-transform:uppercase;text-align:center;}
+.bcard-cat{position:absolute;top:8px;left:8px;font-family:'Share Tech Mono',monospace;font-size:7px;letter-spacing:.1em;text-transform:uppercase;padding:2px 6px;border-radius:2px;}
+.cat-red{background:rgba(176,28,28,.8);color:#FFD0D0;}
+.cat-blue{background:rgba(66,153,255,.8);color:#E0F0FF;}
+.cat-gold{background:rgba(218,165,32,.8);color:#3A2800;}
+.cat-green{background:rgba(22,168,106,.8);color:#C0FFE0;}
+.bcard-body{padding:14px;}
+.bcard-meta{display:flex;justify-content:space-between;margin-bottom:6px;}
+.bcard-date{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:.08em;color:#4A3020;}
+.bcard-read{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:.08em;color:#4A3020;}
+.bcard-title{font-family:'Oswald',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;color:#F5F0E8;line-height:1.2;margin-bottom:6px;}
+.bcard-excerpt{font-size:10px;color:#5A4A3A;line-height:1.55;margin-bottom:10px;}
+.bcard-link{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#4299FF;}
+
+/* CATEGORIES */
+.categories{background:#2C1A0E;padding:28px;border-top:1px solid rgba(218,165,32,.1);border-bottom:1px solid rgba(218,165,32,.1);}
+.cat-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;}
+.cat-pill{font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:6px 14px;border-radius:2px;border:1px solid;cursor:pointer;}
+.cp-blue{color:#4299FF;border-color:rgba(66,153,255,.35);background:rgba(66,153,255,.06);}
+.cp-red{color:#B01C1C;border-color:rgba(176,28,28,.35);background:rgba(176,28,28,.06);}
+.cp-gold{color:#A07810;border-color:rgba(218,165,32,.35);background:rgba(218,165,32,.06);}
+.cp-green{color:#0A6B40;border-color:rgba(22,168,106,.35);background:rgba(22,168,106,.06);}
+.cp-gray{color:#7A6A5A;border-color:rgba(122,106,90,.25);background:rgba(122,106,90,.04);}
+
+/* NEWSLETTER SIGNUP */
+.newsletter{background:#DAA520;padding:36px 28px;position:relative;overflow:hidden;}
+.newsletter::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 3px);pointer-events:none;}
+.nl-deco{position:absolute;right:-10px;top:50%;transform:translateY(-50%);opacity:.07;pointer-events:none;}
+.nl-inner{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;position:relative;z-index:2;}
+.nl-eye{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,0,0,.45);margin-bottom:6px;}
+.nl-h2{font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#111;margin-bottom:4px;}
+.nl-sub{font-size:12px;color:rgba(0,0,0,.55);}
+.nl-form{display:flex;gap:8px;align-items:center;}
+.nl-input{background:#1A0C04;border:1px solid rgba(218,165,32,.4);border-radius:2px;padding:10px 14px;font-family:'Barlow',sans-serif;font-size:12px;color:#F5F0E8;width:220px;}
+.nl-input::placeholder{color:#5A3820;}
+.nl-btn{background:#B01C1C;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:10px 16px;border-radius:2px;white-space:nowrap;border:none;}
+
+/* CTA */
+.final-cta{background:#1A0C04;border-top:3px solid #DAA520;padding:32px 28px;text-align:center;position:relative;overflow:hidden;}
+.fc-deco{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.04;pointer-events:none;}
+.fc-eye{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#DAA520;margin-bottom:10px;position:relative;z-index:2;}
+.fc-h2{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#F5F0E8;margin-bottom:6px;position:relative;z-index:2;}
+.fc-h2 em{color:#B01C1C;font-style:normal;}
+.fc-sub{font-size:12px;color:#7A6A5A;margin-bottom:16px;position:relative;z-index:2;}
+.fc-btns{display:flex;justify-content:center;gap:12px;position:relative;z-index:2;}
+.btn-red{background:#B01C1C;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:12px 22px;border-radius:2px;}
+.btn-ghost{background:transparent;color:#F5F0E8;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:12px 22px;border-radius:2px;border:1.5px solid rgba(218,165,32,.4);}
+.fc-sign{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.1em;color:#4A3020;margin-top:12px;position:relative;z-index:2;}
+.fc-sign b{color:#B01C1C;}
+
+/* FOOTER */
+.footer{background:#0E0602;border-top:3px solid #DAA520;padding:20px 28px;}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;}
+.footer-brand{display:flex;align-items:center;gap:10px;}
+.flp{width:40px;height:40px;background:#1A0C04;border:2px dashed rgba(218,165,32,.4);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.flp span{font-family:'Share Tech Mono',monospace;font-size:6px;color:#4A3010;text-align:center;line-height:1.4;text-transform:uppercase;}
+.fw{font-family:'Oswald',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;color:#F5F0E8;}
+.fw em{color:#B01C1C;font-style:normal;}
+.ft{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:.1em;color:#3A2010;margin-top:3px;}
+.fsoc{display:flex;gap:6px;}
+.sp2{background:#2C1A0E;border:1px solid rgba(218,165,32,.25);border-radius:2px;padding:4px 8px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;color:#6A5A4A;}
+.flinks{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;}
+.fl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#4A3A2A;}
+.fbot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.04);padding-top:10px;}
+.fc2{font-size:10px;color:#3A2A1A;}
+.fg{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.1em;color:#B01C1C;}
+</style>
+
+<div class="page">
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="nav-brand">
+      <div class="logo-ph"><span>Logo<br>Here</span></div>
+      <div>
+        <div class="nwt">Fully <em>Loaded</em> Websites</div>
+        <div class="nws">// Common Sense Digital Marketing</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <div class="nl">Home</div>
+      <div class="nl">Meet Evan</div>
+      <div class="nl">Portfolio</div>
+      <div class="nl act">Advice Blog</div>
+      <div class="nl">FAQ</div>
+      <div class="n-cta">Solutions ↗</div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <svg class="ph-deco" width="300" height="300" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#DAA520" stroke-width="1"/>
+      <line x1="50" y1="4" x2="50" y2="34" stroke="#DAA520" stroke-width="1"/>
+      <line x1="50" y1="66" x2="50" y2="96" stroke="#DAA520" stroke-width="1"/>
+      <line x1="4" y1="50" x2="34" y2="50" stroke="#DAA520" stroke-width="1"/>
+      <line x1="66" y1="50" x2="96" y2="50" stroke="#DAA520" stroke-width="1"/>
+      <text x="50" y="57" text-anchor="middle" font-family="Oswald,sans-serif" font-size="28" font-weight="700" fill="#DAA520" letter-spacing="2">FLW</text>
+      <circle cx="50" cy="50" r="3" fill="#B01C1C"/>
+    </svg>
+    <div style="position:relative;z-index:2;">
+      <div class="sec-eye" style="text-align:center;">// Business Advice for Local Contractors</div>
+      <div class="ph-h1">The FLW <em>Advice Blog</em></div>
+      <div class="ph-sub">Common sense digital marketing tips, local SEO strategies, and real-world advice for conservative local business owners who want to grow.</div>
+    </div>
+  </div>
+
+  <!-- RED STATS -->
+  <div class="stats">
+    <div class="si"><div class="sn">100<b>+</b></div><div class="sl">Articles Published</div></div>
+    <div class="si"><div class="sn"><b>#1</b></div><div class="sl">Local SEO Tips</div></div>
+    <div class="si"><div class="sn">Free<b>.</b></div><div class="sl">Always Free Advice</div></div>
+    <div class="si"><div class="sn">New<b>↑</b></div><div class="sl">Posted Weekly</div></div>
+  </div>
+
+  <!-- WHY BLOGGING WORKS -->
+  <div class="why">
+    <svg class="why-deco" width="240" height="240" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#4299FF" stroke-width="1"/>
+      <line x1="50" y1="4" x2="50" y2="34" stroke="#4299FF" stroke-width="1"/>
+      <line x1="50" y1="66" x2="50" y2="96" stroke="#4299FF" stroke-width="1"/>
+      <line x1="4" y1="50" x2="34" y2="50" stroke="#4299FF" stroke-width="1"/>
+      <line x1="66" y1="50" x2="96" y2="50" stroke="#4299FF" stroke-width="1"/>
+      <text x="50" y="57" text-anchor="middle" font-family="Oswald,sans-serif" font-size="28" font-weight="700" fill="#4299FF" letter-spacing="2">FLW</text>
+    </svg>
+    <div class="why-grid">
+      <div>
+        <div class="sec-eye">// Why Blogging Works</div>
+        <div class="sec-h2">Content That <em>Compounds</em></div>
+        <div class="body-text">Every blog post you publish is a permanent asset working for your business 24/7. Unlike paid ads that stop the moment you stop paying, blog content keeps ranking, keeps driving traffic, and keeps bringing in leads — month after month, year after year.</div>
+        <div class="body-text">For local service contractors, a well-written advice blog is one of the most powerful and cost-effective marketing tools available. It builds authority, earns trust, and brings the right customers directly to your door.</div>
+        <div class="pull-quote">
+          <div class="pq-text">"Stories convert. Expertise builds trust. Your blog is where both happen — and where your next customer finds you first."</div>
+        </div>
+      </div>
+      <div class="why-cards">
+        <div class="why-card">
+          <div class="wc-title">Rank Locally Without Paying for Ads</div>
+          <div class="wc-body">Targeted blog posts help you appear in Google searches your customers are already making — for free, every single day.</div>
+        </div>
+        <div class="why-card">
+          <div class="wc-title">Establish Yourself as the Local Expert</div>
+          <div class="wc-body">When you answer the questions your customers are asking, you become the authority they trust — before they even pick up the phone.</div>
+        </div>
+        <div class="why-card">
+          <div class="wc-title">Drive Traffic Back to Your Mothership</div>
+          <div class="wc-body">Every post links back to your website, sending a steady stream of warm, ready-to-buy visitors directly to your CTAs.</div>
+        </div>
+        <div class="why-card">
+          <div class="wc-title">Content That Grows in Value Over Time</div>
+          <div class="wc-body">A blog post published today can still be bringing in leads two years from now — compounding your ROI with every month that passes.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FEATURED POST -->
+  <div class="featured">
+    <div class="feat-label">// Featured Article</div>
+    <div class="feat-card">
+      <div class="feat-img"><div class="feat-img-lbl">Featured Post<br>Image Placeholder</div></div>
+      <div class="feat-info">
+        <div>
+          <div class="feat-meta">
+            <div class="feat-tag">Local SEO</div>
+            <div class="feat-date">March 28, 2026</div>
+          </div>
+          <div class="feat-title">Why Your Local Business Needs a Blog in 2026 (And How to Start)</div>
+          <div class="feat-excerpt">Most local contractors think blogging is for big companies. They're wrong — and that misconception is exactly why you can dominate your local market while your competitors sit still. Here's the complete playbook.</div>
+        </div>
+        <div class="feat-link">Read Full Article →</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BLOG GRID -->
+  <div class="blog-grid-section">
+    <div class="sec-eye">// Recent Articles</div>
+    <div style="font-family:'Oswald',sans-serif;font-size:20px;font-weight:700;text-transform:uppercase;color:#F5F0E8;">Latest <span style="color:#4299FF;">Advice</span></div>
+    <div class="blog-grid">
+
+      <div class="bcard">
+        <div class="bcard-img" style="background:#1A0C04;">
+          <div class="bcard-img-lbl">Post Image</div>
+          <div class="bcard-cat cat-blue">Local SEO</div>
+        </div>
+        <div class="bcard-body">
+          <div class="bcard-meta"><div class="bcard-date">Mar 21, 2026</div><div class="bcard-read">5 min read</div></div>
+          <div class="bcard-title">5 Google Business Profile Mistakes Killing Your Local Rankings</div>
+          <div class="bcard-excerpt">Your GBP is your most powerful free tool — and most contractors are leaving it half-finished. Here's what to fix today.</div>
+          <div class="bcard-link">Read More →</div>
+        </div>
+      </div>
+
+      <div class="bcard">
+        <div class="bcard-img" style="background:#0E0A04;">
+          <div class="bcard-img-lbl">Post Image</div>
+          <div class="bcard-cat cat-red">Website Tips</div>
+        </div>
+        <div class="bcard-body">
+          <div class="bcard-meta"><div class="bcard-date">Mar 14, 2026</div><div class="bcard-read">7 min read</div></div>
+          <div class="bcard-title">What Every Contractor Website Needs on the Homepage (And Why)</div>
+          <div class="bcard-excerpt">Most contractor websites lose leads in the first 5 seconds. Here's exactly what your homepage needs to convert visitors into calls.</div>
+          <div class="bcard-link">Read More →</div>
+        </div>
+      </div>
+
+      <div class="bcard">
+        <div class="bcard-img" style="background:#060A14;">
+          <div class="bcard-img-lbl">Post Image</div>
+          <div class="bcard-cat cat-gold">Marketing</div>
+        </div>
+        <div class="bcard-body">
+          <div class="bcard-meta"><div class="bcard-date">Mar 7, 2026</div><div class="bcard-read">6 min read</div></div>
+          <div class="bcard-title">How to Get 5-Star Reviews on Autopilot Without Being Pushy</div>
+          <div class="bcard-excerpt">Reviews are the #1 trust signal for local service businesses. Here's a simple system that gets them flowing consistently.</div>
+          <div class="bcard-link">Read More →</div>
+        </div>
+      </div>
+
+      <div class="bcard">
+        <div class="bcard-img" style="background:#041208;">
+          <div class="bcard-img-lbl">Post Image</div>
+          <div class="bcard-cat cat-green">Content Strategy</div>
+        </div>
+        <div class="bcard-body">
+          <div class="bcard-meta"><div class="bcard-date">Feb 28, 2026</div><div class="bcard-read">8 min read</div></div>
+          <div class="bcard-title">The Local Business Blog Post Formula That Ranks Every Time</div>
+          <div class="bcard-excerpt">Not all blog posts are created equal. This repeatable formula consistently produces posts that rank in your local market.</div>
+          <div class="bcard-link">Read More →</div>
+        </div>
+      </div>
+
+      <div class="bcard">
+        <div class="bcard-img" style="background:#1A0C04;">
+          <div class="bcard-img-lbl">Post Image</div>
+          <div class="bcard-cat cat-red">Website Tips</div>
+        </div>
+        <div class="bcard-body">
+          <div class="bcard-meta"><div class="bcard-date">Feb 21, 2026</div><div class="bcard-read">5 min read</div></div>
+          <div class="bcard-title">Why Page Speed is Costing You Customers (And How to Fix It Fast)</div>
+          <div class="bcard-excerpt">A slow website doesn't just frustrate visitors — it tanks your rankings. Here's how to diagnose and fix it without a developer.</div>
+          <div class="bcard-link">Read More →</div>
+        </div>
+      </div>
+
+      <div class="bcard">
+        <div class="bcard-img" style="background:#0E0A04;">
+          <div class="bcard-img-lbl">Post Image</div>
+          <div class="bcard-cat cat-gold">Marketing</div>
+        </div>
+        <div class="bcard-body">
+          <div class="bcard-meta"><div class="bcard-date">Feb 14, 2026</div><div class="bcard-read">6 min read</div></div>
+          <div class="bcard-title">AI and Local Business: What's Changed and What You Need to Do Now</div>
+          <div class="bcard-excerpt">AI is reshaping local search. Here's what it means for contractors and how to position your business ahead of the curve.</div>
+          <div class="bcard-link">Read More →</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <div class="categories">
+    <div class="sec-eye">// Browse by Topic</div>
+    <div style="font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;text-transform:uppercase;color:#F5F0E8;">Article <span style="color:#DAA520;">Categories</span></div>
+    <div class="cat-grid">
+      <div class="cat-pill cp-blue">Local SEO</div>
+      <div class="cat-pill cp-red">Website Tips</div>
+      <div class="cat-pill cp-gold">Marketing Strategy</div>
+      <div class="cat-pill cp-green">Content Strategy</div>
+      <div class="cat-pill cp-gray">Google Business</div>
+      <div class="cat-pill cp-gray">Reviews &amp; Reputation</div>
+      <div class="cat-pill cp-gray">AI &amp; Technology</div>
+      <div class="cat-pill cp-gray">Conservative Business</div>
+      <div class="cat-pill cp-gray">Case Studies</div>
+      <div class="cat-pill cp-gray">Video Marketing</div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER SIGNUP — GOLD -->
+  <div class="newsletter">
+    <svg class="nl-deco" width="200" height="200" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#111" stroke-width="1"/>
+      <text x="50" y="57" text-anchor="middle" font-family="Oswald,sans-serif" font-size="28" font-weight="700" fill="#111" letter-spacing="2">FLW</text>
+    </svg>
+    <div class="nl-inner">
+      <div>
+        <div class="nl-eye">// Never Miss an Article</div>
+        <div class="nl-h2">Get the FLW Expert Newsletter</div>
+        <div class="nl-sub">Local SEO tips, marketing advice, and real-world strategies — delivered straight to your inbox. No spam. No agenda. Just common sense advice that works.</div>
+      </div>
+      <div class="nl-form">
+        <input class="nl-input" type="text" placeholder="Your email address"/>
+        <div class="nl-btn">Subscribe →</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FINAL CTA -->
+  <div class="final-cta">
+    <svg class="fc-deco" width="280" height="280" viewBox="0 0 100 100" style="opacity:.04;transform:translate(-50%,-50%);">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#DAA520" stroke-width="1"/>
+      <text x="50" y="57" text-anchor="middle" font-family="Oswald,sans-serif" font-size="28" font-weight="700" fill="#DAA520" letter-spacing="2">FLW</text>
+    </svg>
+    <div class="fc-eye">// Want a Blog Built for Your Business?</div>
+    <div class="fc-h2">Let Evan Build Your <em>Content Machine</em></div>
+    <div class="fc-sub">Done-for-you blogging that ranks locally and brings leads to your Mothership every week.</div>
+    <div class="fc-btns">
+      <div class="btn-red">&#9990; Call Evan — (828) 818-5140</div>
+      <div class="btn-ghost">See Solutions →</div>
+    </div>
+    <div class="fc-sign">All Glory to God <b>☦</b></div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="flp"><span>Logo<br>Here</span></div>
+        <div><div class="fw">Fully <em>Loaded</em> Websites</div><div class="ft">// Common Sense Web Design &amp; Digital Marketing</div></div>
+      </div>
+      <div class="fsoc"><div class="sp2">X</div><div class="sp2">Rumble</div><div class="sp2">Truth Social</div></div>
+    </div>
+    <div class="flinks">
+      <div class="fl">Home</div><div class="fl">Meet Evan</div><div class="fl">Portfolio</div><div class="fl">Blog</div><div class="fl">FAQ</div><div class="fl">Solutions</div><div class="fl">Terms</div><div class="fl">Privacy</div><div class="fl">Accessibility</div><div class="fl">Disclaimer</div>
+    </div>
+    <div class="fbot">
+      <div class="fc2">© 2026 Fully Loaded Websites | All Rights Reserved</div>
+      <div class="fg">All Glory to God ☦</div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,377 @@
+/* ============================================================
+   FULLY LOADED WEBSITES — globals.css v2.0
+   Next.js 14 + Tailwind CSS — April 2026
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@600;700&family=Share+Tech+Mono&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+:root {
+  --flw-red:           #B01C1C;
+  --flw-red-border:    #8A1414;
+  --flw-red-dark:      #7A1010;
+  --flw-red-light:     #D42B2B;
+  --flw-gold:          #DAA520;
+  --flw-gold-border:   #B08010;
+  --flw-gold-dark:     #A07810;
+  --flw-gold-bright:   #C8A840;
+  --flw-blue:          #4299FF;
+  --flw-green:         #16A86A;
+  --flw-green-dark:    #0A6B40;
+  --flw-footer-bg:     #0E0602;
+  --flw-dark:          #1A0C04;
+  --flw-surface:       #2C1A0E;
+  --flw-card:          #1E0E06;
+  --flw-white:         #F5F0E8;
+  --flw-cream:         #F0E8D8;
+  --flw-cream-mid:     #C8B49A;
+  --flw-cream-dim:     #C8B89A;
+  --flw-muted:         #A8927A;
+  --flw-faint:         #7A6A5A;
+  --flw-footer-link:   #C8B48A;
+  --flw-footer-copy:   #8A7050;
+}
+
+/* ============================================================
+   RESET & BASE
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--flw-dark);
+  color: var(--flw-white);
+  font-family: 'Barlow', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+h1, h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  color: var(--flw-white);
+}
+
+h3, h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  color: var(--flw-white);
+}
+
+p {
+  color: var(--flw-muted);
+  line-height: 1.7;
+}
+
+a {
+  color: var(--flw-red-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: var(--flw-white); }
+
+/* Section eyebrow labels */
+.section-label {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--flw-gold);
+  display: block;
+  margin-bottom: 8px;
+}
+.section-label::before { content: '// '; opacity: 0.6; }
+
+/* ============================================================
+   TEXTURES
+   ============================================================ */
+.texture-dark {
+  background-color: var(--flw-dark);
+  background-image: repeating-linear-gradient(
+    0deg, rgba(255,255,255,.012) 0, transparent 1px, transparent 3px
+  );
+}
+
+.texture-surface {
+  background-color: var(--flw-surface);
+  background-image:
+    repeating-linear-gradient(45deg, rgba(0,0,0,.04) 0, transparent 1px, transparent 5px),
+    repeating-linear-gradient(-45deg, rgba(255,255,255,.015) 0, transparent 1px, transparent 5px);
+}
+
+.scanlines { position: relative; }
+.scanlines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg, transparent 0, transparent 2px,
+    rgba(0,0,0,.018) 2px, rgba(0,0,0,.018) 3px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 12px 22px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.1s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.btn:active { transform: scale(0.98); }
+
+.btn-primary {
+  background: var(--flw-red);
+  color: var(--flw-white);
+  border: none;
+}
+.btn-primary:hover { background: var(--flw-red-light); color: var(--flw-white); }
+.btn-primary:active { background: var(--flw-red-dark); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--flw-white);
+  border: 1.5px solid rgba(218,165,32,.4);
+}
+.btn-ghost:hover { border-color: var(--flw-white); color: var(--flw-white); }
+
+.btn-dark {
+  background: #111;
+  color: var(--flw-gold);
+  border: none;
+}
+.btn-dark:hover { background: #1A1A1A; }
+
+/* ============================================================
+   CARDS
+   ============================================================ */
+.card {
+  background: var(--flw-card);
+  border: 1px solid rgba(176,28,28,.2);
+  border-radius: 2px;
+  padding: 20px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.card:hover {
+  border-color: rgba(176,28,28,.65);
+  transform: translateY(-4px);
+}
+
+.card-accent-red   { border-top: 3px solid var(--flw-red); }
+.card-accent-blue  { border-top: 3px solid var(--flw-blue); }
+.card-accent-gold  { border-top: 3px solid var(--flw-gold); }
+.card-accent-green { border-top: 3px solid var(--flw-green); }
+
+/* ============================================================
+   STATS BAR
+   ============================================================ */
+.stats-bar {
+  background: var(--flw-red);
+  border-top: 3px solid var(--flw-red-dark);
+  border-bottom: 3px solid var(--flw-red-dark);
+}
+.stat-num {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+}
+.stat-num b { color: var(--flw-gold); }
+.stat-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,.55);
+  margin-top: 3px;
+}
+
+/* ============================================================
+   NAVBAR
+   ============================================================ */
+.navbar {
+  background: var(--flw-gold);
+  border-bottom: 3px solid var(--flw-gold-border);
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  transition: backdrop-filter 0.3s, background 0.3s;
+}
+.navbar.scrolled {
+  backdrop-filter: blur(12px);
+  background: rgba(218,165,32,.92);
+}
+.nav-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #3A2800;
+  transition: color 0.2s;
+}
+.nav-link:hover { color: #111; }
+.nav-link.active { color: var(--flw-red); }
+.nav-wordmark {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #111;
+}
+.nav-wordmark em { color: var(--flw-red); font-style: normal; }
+.nav-sub {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #5A3800;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--flw-footer-bg);
+  border-top: 3px solid var(--flw-gold);
+}
+.footer-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--flw-footer-link);
+  transition: color 0.2s;
+}
+.footer-link:hover { color: var(--flw-white); }
+.footer-copy {
+  font-size: 11px;
+  color: var(--flw-footer-copy);
+}
+.footer-glory {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--flw-red);
+}
+.social-pill {
+  background: var(--flw-dark);
+  border: 1px solid rgba(218,165,32,.3);
+  border-radius: 2px;
+  padding: 5px 10px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--flw-gold-bright);
+  transition: border-color 0.2s;
+}
+.social-pill:hover { border-color: var(--flw-gold); }
+
+/* ============================================================
+   SECTION DIVIDER (crosshair)
+   ============================================================ */
+.divider-tactical {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--flw-dark);
+  padding: 0 28px;
+}
+.divider-tactical::before,
+.divider-tactical::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(218,165,32,.2);
+}
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
+.container-flw {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+@media (min-width: 768px)  { .container-flw { padding: 0 48px; } }
+@media (min-width: 1280px) { .container-flw { padding: 0 64px; } }
+
+.section-padding { padding: 80px 0; }
+@media (min-width: 768px) { .section-padding { padding: 120px 0; } }
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes pulse-crosshair {
+  0%, 100% { transform: scale(1); opacity: 0.05; }
+  50%       { transform: scale(1.04); opacity: 0.07; }
+}
+.animate-crosshair { animation: pulse-crosshair 4s ease-in-out infinite; }
+
+@keyframes blink-cursor {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+.animate-cursor::after {
+  content: '_';
+  color: var(--flw-red);
+  animation: blink-cursor 1s step-end infinite;
+}
+
+/* ============================================================
+   ACCESSIBILITY
+   ============================================================ */
+:focus-visible { outline: 2px solid var(--flw-red); outline-offset: 3px; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+@media (max-width: 768px) {
+  .section-padding { padding: 64px 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}

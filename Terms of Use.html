@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Terms of Use — Fully Loaded Websites</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Condensed:wght@600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet" />
+<style>
+:root{--red:#B01C1C;--red-b:#8A1414;--gold:#DAA520;--gold-b:#B08010;--foot-bg:#0E0602;--dark:#1A0C04;--surf:#2C1A0E;--wh:#F5F0E8;--cream:#F0E8D8;--cream-m:#C8B49A;--muted:#A8927A;--faint:#7A6A5A;--foot-lnk:#C8B48A;--foot-cp:#8A7050;--gold-br:#C8A840;}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--dark);color:var(--wh);font-family:'Barlow',sans-serif;font-size:16px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:var(--gold);text-decoration:none;transition:color .2s;}
+a:hover{color:var(--wh);}
+img{max-width:100%;display:block;}
+.container{width:100%;max-width:960px;margin:0 auto;padding:0 24px;}
+@media(min-width:768px){.container{padding:0 48px;}}
+.navbar{background:var(--gold);border-bottom:3px solid var(--gold-b);position:fixed;top:0;left:0;right:0;z-index:100;transition:backdrop-filter .3s,background .3s;}
+.navbar.scrolled{backdrop-filter:blur(12px);background:rgba(218,165,32,.92);}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:100px;padding:0 24px;}
+@media(min-width:768px){.nav-inner{padding:0 40px;}}
+.nav-brand{display:flex;align-items:center;gap:14px;}
+.nav-logo-box{width:100px;height:100px;background:var(--red);display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.nav-wordmark{font-family:'Oswald',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.08em;color:#111;}
+.nav-wordmark em{color:var(--red);font-style:normal;}
+.nav-sub{font-family:'Share Tech Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#3A2000;margin-top:3px;}
+.nav-links{display:none;align-items:center;gap:20px;}
+@media(min-width:1100px){.nav-links{display:flex;}}
+.nav-link{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.06em;color:#3A2800;transition:color .2s;text-decoration:none;}
+.nav-link:hover{color:#111;}
+.nav-cta{background:var(--red);color:var(--wh)!important;border:2px solid var(--red-b);padding:10px 20px;border-radius:2px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:16px;text-transform:uppercase;letter-spacing:.06em;transition:background .2s;text-decoration:none;}
+.nav-cta:hover{background:#D42B2B;color:var(--wh)!important;}
+.hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:6px;}
+@media(min-width:1100px){.hamburger{display:none;}}
+.hamburger span{display:block;width:22px;height:2px;background:#3A2800;}
+.mobile-drawer{position:fixed;inset:0;z-index:200;pointer-events:none;opacity:0;transition:opacity .3s;}
+.mobile-drawer.open{pointer-events:all;opacity:1;}
+.drawer-backdrop{position:absolute;inset:0;background:rgba(0,0,0,.7);}
+.drawer-panel{position:absolute;top:0;right:0;bottom:0;width:280px;background:var(--dark);border-left:3px solid var(--gold);padding:24px;transform:translateX(100%);transition:transform .35s ease;}
+.mobile-drawer.open .drawer-panel{transform:translateX(0);}
+.drawer-close{font-family:'Share Tech Mono',monospace;font-size:14px;color:var(--gold);cursor:pointer;letter-spacing:.1em;margin-bottom:32px;display:block;}
+.drawer-link{display:block;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:18px;text-transform:uppercase;letter-spacing:.08em;color:var(--cream-m);padding:12px 0;border-bottom:1px solid rgba(218,165,32,.12);text-decoration:none;}
+.drawer-link.cta{color:#D42B2B;border-bottom:none;margin-top:16px;}
+.legal-hero{padding-top:100px;background-color:var(--surf);background-image:repeating-linear-gradient(45deg,rgba(0,0,0,.04) 0,transparent 1px,transparent 5px);border-bottom:3px solid rgba(218,165,32,.2);}
+.legal-hero-inner{padding:48px 0 40px;}
+.legal-eyebrow{font-family:'Share Tech Mono',monospace;font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:10px;}
+.legal-eyebrow::before{content:'';}
+.legal-h1{font-family:'Oswald',sans-serif;font-weight:700;font-size:clamp(24px,4vw,40px);text-transform:uppercase;letter-spacing:.04em;color:var(--wh);margin-bottom:10px;}
+.legal-h1 em{color:var(--red);font-style:normal;}
+.legal-meta{font-family:'Share Tech Mono',monospace;font-size:14px;letter-spacing:.08em;color:var(--faint);}
+.legal-body{padding:64px 0 100px;}
+.legal-section{margin-bottom:48px;}
+.ls-h2{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:20px;text-transform:uppercase;letter-spacing:.06em;color:var(--cream);border-left:3px solid var(--gold);padding-left:14px;margin-bottom:16px;}
+.ls-h3{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:17px;text-transform:uppercase;letter-spacing:.04em;color:var(--cream-m);margin-bottom:10px;margin-top:24px;}
+.ls-p{font-size:16px;color:var(--muted);line-height:1.8;margin-bottom:14px;}
+.ls-ul{list-style:none;margin-bottom:14px;display:flex;flex-direction:column;gap:8px;}
+.ls-ul li{font-size:16px;color:var(--muted);line-height:1.7;padding-left:18px;position:relative;}
+.ls-ul li::before{content:'';position:absolute;left:0;top:10px;width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.ls-divider{height:1px;background:rgba(218,165,32,.15);margin:40px 0;}
+.contact-box{background:var(--surf);border:1px solid rgba(218,165,32,.2);border-left:3px solid var(--gold);border-radius:0 2px 2px 0;padding:20px 24px;margin-top:16px;}
+.contact-box p{font-size:16px;color:var(--cream-m);margin-bottom:4px;}
+.footer{background:var(--foot-bg);border-top:3px solid var(--gold);}
+.footer-inner{padding:48px 24px 32px;}@media(min-width:768px){.footer-inner{padding:48px 48px 32px;}}@media(min-width:1280px){.footer-inner{padding:48px 64px 32px;}}
+.footer-row1{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:24px;padding-bottom:28px;border-bottom:1px solid rgba(218,165,32,.15);}
+.footer-logo-box{width:100px;height:100px;min-width:100px;min-height:100px;background:var(--red);border-radius:2px;display:flex;align-items:center;justify-content:center;margin-bottom:8px;}
+.footer-brand-title{font-family:'Oswald',sans-serif;font-weight:700;font-size:22px;text-transform:uppercase;letter-spacing:.08em;color:var(--cream);}
+.footer-brand-title em{color:var(--red);font-style:normal;}
+.footer-brand-sub{font-family:'Share Tech Mono',monospace;font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:#E8C870;margin-top:2px;}
+.socials{display:flex;gap:8px;flex-wrap:wrap;}
+.social-pill{background:var(--dark);border:1px solid rgba(218,165,32,.3);border-radius:2px;padding:5px 12px;font-family:'Barlow Condensed',sans-serif;font-size:18px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--gold-br);cursor:pointer;}
+.footer-nav{display:flex;flex-wrap:wrap;gap:8px 20px;padding:20px 0;border-bottom:1px solid rgba(218,165,32,.1);justify-content:center;}
+.footer-link{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:22px;text-transform:uppercase;letter-spacing:.08em;color:var(--foot-lnk);transition:color .2s;text-decoration:none;}
+.footer-link:hover{color:var(--wh);}
+.footer-bottom{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding-top:20px;}
+.footer-copy{font-size:18px;color:var(--foot-cp);}
+.footer-glory{font-family:'Share Tech Mono',monospace;font-size:18px;letter-spacing:.1em;color:var(--red);}
+
+/* ── MOBILE FIXES ─────────────────────────────────── */
+@media(max-width:768px){
+  /* Navbar */
+  .nav-wordmark{font-size:16px;}
+  .nav-sub{font-size:11px;}
+  .nav-logo-box{width:72px;height:72px;}
+  .nav-inner{height:72px;}
+
+  /* Hero */
+  .hero{padding-top:72px;}
+  .hero-grid{grid-template-columns:1fr;gap:32px;}
+  .hero-photo{max-width:100%;aspect-ratio:1/1;}
+  .hero-h1{font-size:clamp(24px,7vw,36px);}
+  .hero-btns{flex-direction:column;}
+  .hero-btns .btn{width:100%;justify-content:center;}
+
+  /* Stats */
+  .stats-grid{grid-template-columns:repeat(2,1fr);}
+  .stat-item:nth-child(2){border-right:none;}
+  .stat-item:nth-child(3){border-right:1px solid rgba(255,255,255,.2);}
+
+  /* Services grid */
+  .services-grid{grid-template-columns:1fr;}
+
+  /* Web Matrix */
+  .matrix-svg-wrap{max-width:100%;}
+  .matrix-banner{flex-direction:column;text-align:center;padding:12px 16px;}
+  .matrix-banner-title{font-size:18px;}
+
+  /* Evan section */
+  .evan-grid{grid-template-columns:1fr;}
+  .evan-photo{max-width:280px;margin:0 auto;}
+
+  /* Extra mile */
+  .extra-grid{grid-template-columns:1fr;}
+
+  /* Testimonials */
+  .testimonials-grid{grid-template-columns:1fr;}
+
+  /* Final CTA */
+  .final-btns{flex-direction:column;align-items:center;}
+  .final-btns .btn{width:100%;max-width:320px;justify-content:center;}
+
+  /* Footer */
+  .footer-row1{flex-direction:column;}
+  .footer-bottom{flex-direction:column;align-items:center;text-align:center;gap:6px;}
+
+  /* Page hero */
+  .page-hero{padding-top:72px;}
+  .post-hero{padding-top:72px;}
+  .legal-hero{padding-top:72px;}
+
+  /* Buttons full width on mobile */
+  .contact-btns{flex-direction:column;align-items:center;}
+  .contact-btns .btn{width:100%;max-width:320px;justify-content:center;}
+
+  /* Video CTA band */
+  .video-cta-inner{flex-direction:column;gap:12px;}
+
+  /* Solutions hero */
+  .hero-inner{grid-template-columns:1fr!important;}
+  .price-badge{justify-content:center;}
+
+  /* Blog grid */
+  .blog-grid{grid-template-columns:1fr;}
+  .feat-card{grid-template-columns:1fr!important;}
+
+  /* Portfolio grid */
+  .proj-grid{grid-template-columns:1fr!important;}
+
+  /* Why grid */
+  .why-grid{grid-template-columns:1fr!important;}
+
+  /* Process steps */
+  .proc-steps{grid-template-columns:1fr 1fr!important;}
+
+  /* Evan section meet evan page */
+  .hero-inner{gap:24px;}
+
+  /* General overflow fix */
+  img{max-width:100%;}
+  .container{padding:0 16px;}
+
+  /* Matrix info */
+  .matrix-info{margin-top:20px;}
+
+  /* Socials */
+  .socials{justify-content:center;}
+
+  /* Footer nav */
+  .footer-nav{justify-content:center;}
+
+  /* Solutions price includes */
+  .price-includes{grid-template-columns:1fr!important;}
+}
+
+@media(max-width:480px){
+  .stat-num{font-size:20px;}
+  .stat-label{font-size:12px;}
+  .btn{font-size:13px;padding:10px 16px;}
+  .nav-wordmark{font-size:14px;}
+  .nav-sub{display:none;}
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <div class="nav-brand">
+      <div class="nav-logo-box"><img src="images/flw-logo.png" alt="FLW Logo" style="width:100%;height:100%;object-fit:contain;display:block;" /></div>
+      <div>
+        <div class="nav-wordmark">Fully <em>LOADED</em> Websites</div>
+        <div class="nav-sub">Common Sense Digital Marketing</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <a href="FLW Homepage.html" class="nav-link">Home</a>
+      <a href="Meet Evan.html" class="nav-link">Meet Evan</a>
+      <a href="Portfolio.html" class="nav-link">Portfolio</a>
+      <a href="Blog.html" class="nav-link">Advice Blog</a>
+      <a href="Solutions.html" class="nav-cta">Solutions</a>
+    </div>
+    <div class="hamburger" onclick="openDrawer()"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="mobile-drawer" id="mobileDrawer">
+  <div class="drawer-backdrop" onclick="closeDrawer()"></div>
+  <div class="drawer-panel">
+    <span class="drawer-close" onclick="closeDrawer()">[ CLOSE ✕ ]</span>
+    <a href="FLW Homepage.html" class="drawer-link">Home</a>
+    <a href="Meet Evan.html" class="drawer-link">Meet Evan</a>
+    <a href="Portfolio.html" class="drawer-link">Portfolio</a>
+    <a href="Blog.html" class="drawer-link">Advice Blog</a>
+    <a href="Solutions.html" class="drawer-link cta">Solutions →</a>
+  </div>
+</div>
+
+<section class="legal-hero">
+  <div class="container">
+    <div class="legal-hero-inner">
+      <span class="legal-eyebrow">Legal</span>
+      <h1 class="legal-h1">Terms <em>of Use</em></h1>
+      <div class="legal-meta">Last Updated: May 2, 2026 &nbsp;|&nbsp; Fully Loaded Websites &nbsp;|&nbsp; Asheville, NC</div>
+    </div>
+  </div>
+</section>
+
+<div class="legal-body">
+  <div class="container">
+
+    <div class="legal-section">
+      <div class="ls-h2">1. Agreement to Terms</div>
+      <p class="ls-p">These Terms of Use constitute a legally binding agreement between you and Fully Loaded Websites, a service of The Arthur Landaw Group ("Company," "we," "us," or "our"), concerning your access to and use of our website and services.</p>
+      <p class="ls-p">By accessing our website or engaging our services, you agree to be bound by these Terms. If you do not agree to these Terms, you are prohibited from using our site and services. We reserve the right to update these Terms at any time without prior notice.</p>
+    </div>
+
+    <div class="ls-divider"></div>
+
+    <div class="legal-section">
+      <div class="ls-h2">2. Services</div>
+      <p class="ls-p">Fully Loaded Websites provides web design, digital marketing, SEO, blogging, newsletter, and related services to local business owners. All services are subject to a separate service agreement or proposal that governs the specific scope, deliverables, timeline, and payment terms for your project.</p>
+      <p class="ls-p">We reserve the right to refuse service to anyone for any reason at any time. We may modify, suspend, or discontinue any aspect of our services at our discretion.</p>
+    </div>
+
+    <div class="ls-divider"></div>
+
+    <div class="legal-section">
+      <div class="ls-h2">3. Intellectual Property</div>
+      <p class="ls-p">Unless otherwise specified in a written service agreement, the following intellectual property terms apply:</p>
+      <ul class="ls-ul">
+        <li>Upon full payment, clients receive full ownership of the custom website design and content created specifically for their project.</li>
+        <li>Fully Loaded Websites retains the right to display completed work in our portfolio unless the client requests otherwise in writing.</li>
+        <li>Any proprietary tactics, frameworks, code libraries, or methodologies developed by Fully Loaded Websites remain our property.</li>
+        <li>All content on the Fully Loaded Websites website — including text, graphics, logos, and images — is the property of Fully Loaded Websites or The Arthur Landaw Group and is protected by copyright law.</li>
+      </ul>
+    </div>
+
+    <div class="ls-divider"></div>
+
+    <div class="legal-section">
+      <div class="ls-h2">4. Payment Terms</div>
+      <p class="ls-p">Payment terms are outlined in your individual service agreement or proposal. General terms include:</p>
+      <ul class="ls-ul">
+        <li>A deposit may be required before project work begins</li>
+        <li>Final payment is due upon project completion and prior to site launch</li>
+        <li>Ongoing service fees (maintenance, blogging, newsletters) are billed monthly</li>
+        <li>Late payments may result in suspension of services</li>
+        <li>All fees are non-refundable unless otherwise specified in writing</li>
+      </ul>
+    </div>
+
+    <div class="ls-divider"></div>
+
+    <div class="legal-section">
+      <div class="ls-h2">5. Client Responsibilities</div>
+      <p class="ls-p">As a client or website visitor, you agree to:</p>
+      <ul class="ls-ul">
+        <li>Provide accurate and complete information when requested</li>
+        <li>Provide timely feedback, approvals, and content as needed for your project</li>
+        <li>Not use our website or services for any unlawful purpose</li>
+        <li>Not attempt to gain unauthorized access to any part of our systems</li>
+        <li>Not transmit any harmful, offensive, or disruptive content</li>
+      </ul>
+    </div>
+
+    <div class="ls-divider"></div>
+
+    <div class="legal-section">
+      <div class="ls-h2">6. Disclaimer of Warranties</div>
+      <p class="ls-p">Our website and services are provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied. We do not warrant that our services will be uninterrupted, error-free, or free of viruses or other harmful components.</p>
+      <p class="ls-p">While we strive to achieve strong results for every client, we make no guarantees of specific outcomes including search engine rankings, lead volume, or revenue increases. Results vary based on market conditions, competition, and other factors outside our control.</p>
+    </div>
+
+    <div class="ls-divider"></div>
+
+    <div class="legal-section">
+      <div class="ls-h2">7. Limitation of Liability</div>
+      <p class="ls-p">To the fullest extent permitted by law, Fully Loaded Websites and The Arthur Landaw Group shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of our website or services, even if we have been advised of the possibility of such damages.</p>
+      <p class="ls-p">Our total liability to you for any claims arising under these Terms shall not exceed the total amount paid by you to us in the six (6) months preceding the claim.</p>
+    </div>
+
+    <div class="ls-divider"></div>
+
+    <div class="legal-section">
+      <div class="ls-h2">8. Governing Law</div>
+      <p class="ls-p">These Terms shall be governed by and construed in accordance with the laws of the State of North Carolina, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be resolved exclusively in the state or federal courts located in North Carolina.</p>
+    </div>
+
+    <div class="ls-divider"></div>
+
+    <div class="legal-section">
+      <div class="ls-h2">9. Termination</div>
+      <p class="ls-p">We reserve the right to terminate or suspend access to our services immediately, without prior notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties, or for any other reason at our sole discretion.</p>
+    </div>
+
+    <div class="ls-divider"></div>
+
+    <div class="legal-section">
+      <div class="ls-h2">10. Contact Us</div>
+      <p class="ls-p">If you have any questions about these Terms of Use, please contact us:</p>
+      <div class="contact-box">
+        <p><strong style="color:var(--wh);">Fully Loaded Websites</strong></p>
+        <p>A Service of The Arthur Landaw Group</p>
+        <p>Asheville, NC Area</p>
+        <p>Phone: <a href="tel:+18288185140">(828) 818-5140</a></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-row1">
+      <div>
+        <div class="footer-logo-box"><img src="images/flw-logo.png" alt="FLW Logo" style="width:100%;height:100%;object-fit:contain;display:block;" /></div>
+        <div class="footer-brand-title">Fully <em>LOADED</em> Websites</div>
+        <div class="footer-brand-sub">Common Sense Web Design &amp; Digital Marketing</div>
+        <div style="font-size:16px;color:var(--muted);margin-top:6px;">Asheville, NC | <a href="tel:+18288185140" style="color:var(--gold);">(828) 818-5140</a></div>
+      </div>
+      <div>
+        <div style="font-family:'Share Tech Mono',monospace;font-size:14px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-bottom:10px;">Follow FLW</div>
+        <div class="socials"><a href="https://x.com/FullyLoadedWeb" target="_blank" class="social-pill">𝕏 Twitter</a><a href="https://rumble.com/c/c-6641485" target="_blank" class="social-pill">▶ Rumble</a><a href="https://truthsocial.com/@fullyloadedwebsites" target="_blank" class="social-pill">◈ Truth Social</a></div>
+      </div>
+    </div>
+    <nav class="footer-nav">
+      <a href="FLW Homepage.html" class="footer-link">Home</a>
+      <a href="Meet Evan.html" class="footer-link">Meet Evan</a>
+      <a href="Portfolio.html" class="footer-link">Portfolio</a>
+      <a href="Blog.html" class="footer-link">Blog</a>
+      <a href="Solutions.html" class="footer-link">Solutions</a>
+      <a href="Terms of Use.html" class="footer-link">Terms</a>
+      <a href="Privacy Policy.html" class="footer-link">Privacy</a>
+      <a href="Accessibility.html" class="footer-link">Accessibility</a>
+      <a href="Disclaimer.html" class="footer-link">Disclaimer</a>
+    </nav>
+    <div class="footer-bottom">
+      <span class="footer-copy">© 2026 Fully Loaded Websites | All Rights Reserved | Built by <a href="https://arthurlandaw.group" target="_blank" style="color:var(--foot-lnk);text-decoration:none;">TALG</a></span>
+      <span class="footer-glory">All Glory to God ☦</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const navbar=document.getElementById('navbar');
+window.addEventListener('scroll',()=>navbar.classList.toggle('scrolled',window.scrollY>60),{passive:true});
+function openDrawer(){document.getElementById('mobileDrawer').classList.add('open');}
+function closeDrawer(){document.getElementById('mobileDrawer').classList.remove('open');}
+</script>
+</body>
+</html>

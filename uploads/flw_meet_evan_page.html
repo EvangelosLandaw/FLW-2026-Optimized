@@ -1,0 +1,333 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Barlow:ital,wght@0,400;0,500;1,400&family=Barlow+Condensed:wght@600;700&family=Share+Tech+Mono&display=swap');
+*{box-sizing:border-box;margin:0;padding:0;}
+.page{font-family:'Barlow',sans-serif;border-radius:8px;overflow:hidden;width:100%;}
+
+.nav{background:#DAA520;border-bottom:3px solid #B08010;padding:10px 24px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{display:flex;align-items:center;gap:12px;}
+.logo-ph{width:48px;height:48px;background:#1A0C04;border:2px dashed rgba(218,165,32,.5);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.logo-ph span{font-family:'Share Tech Mono',monospace;font-size:7px;color:#5A3800;text-align:center;line-height:1.4;text-transform:uppercase;}
+.nwt{font-family:'Oswald',sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#111;line-height:1;}
+.nwt em{color:#B01C1C;font-style:normal;}
+.nws{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:#5A3800;margin-top:2px;}
+.nav-links{display:flex;gap:18px;align-items:center;}
+.nl{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:#3A2800;}
+.nl.act{color:#B01C1C;}
+.n-cta{background:#B01C1C;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:6px 14px;border-radius:2px;border:2px solid #7A1010;}
+
+/* PAGE HERO */
+.page-hero{background:#2C1A0E;padding:40px 28px;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0,transparent 2px,rgba(255,255,255,.012) 2px,rgba(255,255,255,.012) 3px);pointer-events:none;}
+.page-hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(0,0,0,.04) 0,transparent 1px,transparent 5px);pointer-events:none;}
+.ph-deco{position:absolute;right:-30px;top:50%;transform:translateY(-50%);opacity:.05;pointer-events:none;}
+.ph-inner{display:grid;grid-template-columns:200px 1fr;gap:28px;align-items:center;position:relative;z-index:2;}
+.evan-photo-lg{width:200px;height:260px;background:#1E0E06;border-radius:2px;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0;}
+.evan-photo-lbl{font-family:'Barlow Condensed',sans-serif;font-size:11px;color:#4A2A10;text-transform:uppercase;text-align:center;}
+.ph-eye{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#DAA520;margin-bottom:10px;}
+.ph-h1{font-family:'Oswald',sans-serif;font-size:32px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;line-height:1.08;color:#F5F0E8;margin-bottom:6px;}
+.ph-h1 em{color:#B01C1C;font-style:normal;}
+.ph-tagline{font-family:'Barlow Condensed',sans-serif;font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#DAA520;margin-bottom:12px;}
+.ph-body{font-size:13px;color:#A8927A;line-height:1.7;margin-bottom:16px;}
+.ph-btns{display:flex;gap:10px;}
+.btn-red{background:#B01C1C;color:#fff;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:10px 18px;border-radius:2px;display:inline-flex;align-items:center;gap:6px;}
+.btn-ghost{background:transparent;color:#F5F0E8;font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;padding:10px 18px;border-radius:2px;border:1.5px solid rgba(218,165,32,.45);}
+
+/* STATS STRIP */
+.stats{background:#1A0C04;border-top:3px solid #DAA520;border-bottom:1px solid rgba(218,165,32,.15);padding:14px 28px;display:grid;grid-template-columns:repeat(4,1fr);}
+.si{text-align:center;border-right:1px solid rgba(255,255,255,.06);}
+.si:last-child{border-right:none;}
+.sn{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:#F5F0E8;line-height:1;}
+.sn b{color:#DAA520;}
+.sl{font-family:'Barlow Condensed',sans-serif;font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:#6A4A2A;margin-top:3px;}
+
+/* ABOUT SECTION */
+.about{background:#2C1A0E;padding:40px 28px;position:relative;overflow:hidden;}
+.about::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0,transparent 2px,rgba(255,255,255,.01) 2px,rgba(255,255,255,.01) 3px);pointer-events:none;}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;position:relative;z-index:2;}
+.sec-eye{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#DAA520;margin-bottom:8px;}
+.sec-h2{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#F5F0E8;margin-bottom:14px;}
+.sec-h2 em{color:#B01C1C;font-style:normal;}
+.body-text{font-size:13px;color:#A8927A;line-height:1.75;margin-bottom:12px;}
+.pull-quote{border-left:3px solid #DAA520;padding:12px 16px;background:rgba(218,165,32,.06);border-radius:0 2px 2px 0;margin:16px 0;}
+.pq-text{font-family:'Barlow',sans-serif;font-style:italic;font-size:14px;color:#F5F0E8;line-height:1.6;}
+
+/* VALUES */
+.values{background:#1A0C04;padding:40px 28px;border-top:1px solid rgba(218,165,32,.15);}
+.val-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px;}
+.val-card{background:#2C1A0E;border:1px solid rgba(176,28,28,.2);border-top:3px solid #DAA520;border-radius:2px;padding:18px;}
+.val-num{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.12em;color:#DAA520;margin-bottom:6px;}
+.val-title{font-family:'Oswald',sans-serif;font-size:15px;font-weight:700;text-transform:uppercase;color:#F5F0E8;margin-bottom:6px;}
+.val-body{font-size:12px;color:#7A6A5A;line-height:1.6;}
+
+/* WHY FLW */
+.why{background:#2C1A0E;padding:40px 28px;position:relative;overflow:hidden;}
+.why::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(45deg,rgba(0,0,0,.04) 0,transparent 1px,transparent 5px);pointer-events:none;}
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:20px;position:relative;z-index:2;}
+.why-item{background:#1E0E06;border:1px solid rgba(176,28,28,.2);border-radius:2px;padding:14px;display:flex;align-items:flex-start;gap:12px;}
+.why-dot{width:8px;height:8px;background:#B01C1C;border-radius:50%;flex-shrink:0;margin-top:4px;}
+.why-text{font-size:12px;color:#A8927A;line-height:1.6;}
+.why-text b{display:block;font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#F5F0E8;margin-bottom:3px;}
+
+/* PROCESS */
+.process{background:#DAA520;padding:40px 28px;position:relative;overflow:hidden;}
+.process::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent 0,transparent 2px,rgba(0,0,0,.03) 2px,rgba(0,0,0,.03) 3px);pointer-events:none;}
+.proc-deco{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.07;pointer-events:none;}
+.proc-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:20px;position:relative;z-index:2;}
+.proc-step{background:rgba(0,0,0,.15);border:1px solid rgba(0,0,0,.2);border-radius:2px;padding:16px;text-align:center;}
+.proc-num{font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;color:#B01C1C;line-height:1;margin-bottom:6px;}
+.proc-title{font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#111;margin-bottom:4px;}
+.proc-body{font-size:11px;color:rgba(0,0,0,.55);line-height:1.5;}
+.proc-arrow{display:flex;align-items:center;justify-content:center;color:rgba(0,0,0,.3);font-size:18px;padding-top:20px;}
+
+/* CONTACT */
+.contact{background:#1A0C04;padding:40px 28px;border-top:3px solid #DAA520;text-align:center;position:relative;overflow:hidden;}
+.contact-deco{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);opacity:.04;pointer-events:none;}
+.contact-h2{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#F5F0E8;margin-bottom:6px;position:relative;z-index:2;}
+.contact-h2 em{color:#B01C1C;font-style:normal;}
+.contact-sub{font-size:13px;color:#7A6A5A;margin-bottom:20px;position:relative;z-index:2;}
+.contact-info{display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-bottom:20px;position:relative;z-index:2;}
+.contact-item{background:#2C1A0E;border:1px solid rgba(218,165,32,.2);border-radius:2px;padding:12px 20px;display:flex;align-items:center;gap:10px;}
+.ci-label{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:#6A4A2A;margin-bottom:2px;}
+.ci-val{font-family:'Barlow Condensed',sans-serif;font-size:13px;font-weight:700;color:#F5F0E8;}
+.contact-btns{display:flex;justify-content:center;gap:12px;position:relative;z-index:2;}
+.contact-sign{font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.1em;color:#3A2010;margin-top:16px;position:relative;z-index:2;}
+.contact-sign b{color:#B01C1C;}
+
+/* FOOTER */
+.footer{background:#0E0602;border-top:3px solid #DAA520;padding:20px 28px;}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:14px;}
+.footer-brand{display:flex;align-items:center;gap:10px;}
+.flp{width:40px;height:40px;background:#1A0C04;border:2px dashed rgba(218,165,32,.4);border-radius:4px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.flp span{font-family:'Share Tech Mono',monospace;font-size:6px;color:#4A3010;text-align:center;line-height:1.4;text-transform:uppercase;}
+.fw{font-family:'Oswald',sans-serif;font-size:13px;font-weight:700;text-transform:uppercase;color:#F5F0E8;}
+.fw em{color:#B01C1C;font-style:normal;}
+.ft{font-family:'Share Tech Mono',monospace;font-size:8px;letter-spacing:.1em;color:#3A2010;margin-top:3px;}
+.fsoc{display:flex;gap:6px;}
+.sp{background:#2C1A0E;border:1px solid rgba(218,165,32,.25);border-radius:2px;padding:4px 8px;font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:700;text-transform:uppercase;color:#6A5A4A;}
+.flinks{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px;}
+.fl{font-family:'Barlow Condensed',sans-serif;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:#4A3A2A;}
+.fbot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(255,255,255,.04);padding-top:10px;}
+.fc{font-size:10px;color:#3A2A1A;}
+.fg{font-family:'Share Tech Mono',monospace;font-size:9px;letter-spacing:.1em;color:#B01C1C;}
+</style>
+
+<div class="page">
+
+  <!-- NAV -->
+  <div class="nav">
+    <div class="nav-brand">
+      <div class="logo-ph"><span>Logo<br>Here</span></div>
+      <div>
+        <div class="nwt">Fully <em>Loaded</em> Websites</div>
+        <div class="nws">// Common Sense Digital Marketing</div>
+      </div>
+    </div>
+    <div class="nav-links">
+      <div class="nl">Home</div>
+      <div class="nl act">Meet Evan</div>
+      <div class="nl">Portfolio</div>
+      <div class="nl">Blog</div>
+      <div class="nl">FAQ</div>
+      <div class="n-cta">Solutions ↗</div>
+    </div>
+  </div>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <svg class="ph-deco" width="340" height="340" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#DAA520" stroke-width="1"/>
+      <line x1="50" y1="4" x2="50" y2="34" stroke="#DAA520" stroke-width="1"/>
+      <line x1="50" y1="66" x2="50" y2="96" stroke="#DAA520" stroke-width="1"/>
+      <line x1="4" y1="50" x2="34" y2="50" stroke="#DAA520" stroke-width="1"/>
+      <line x1="66" y1="50" x2="96" y2="50" stroke="#DAA520" stroke-width="1"/>
+      <text x="50" y="57" text-anchor="middle" font-family="Oswald,sans-serif" font-size="28" font-weight="700" fill="#DAA520" letter-spacing="2">FLW</text>
+      <circle cx="50" cy="50" r="3" fill="#B01C1C"/>
+    </svg>
+    <div class="ph-inner">
+      <div class="evan-photo-lg"><div class="evan-photo-lbl">Evan's Photo</div></div>
+      <div>
+        <div class="ph-eye">// The Man Behind FLW</div>
+        <div class="ph-h1">Meet <em>Evan</em></div>
+        <div class="ph-tagline">Web Designer · Digital Marketer · Local Business Champion</div>
+        <div class="ph-body">Hi, I'm Evan — and I understand how frustrating it can be to find a web designer who actually shares your worldview and values. I built Fully Loaded Websites to serve conservative business owners who want real results, not runaround.<br><br>I'm based in the Asheville, NC area and I'm passionate about helping local contractors and service businesses dominate their markets online.</div>
+        <div class="ph-btns">
+          <div class="btn-red">&#9990; Call Evan Now</div>
+          <div class="btn-ghost">See My Work →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats">
+    <div class="si"><div class="sn">50<b>+</b></div><div class="sl">Sites Built</div></div>
+    <div class="si"><div class="sn"><b>#1</b></div><div class="sl">Local Rankings</div></div>
+    <div class="si"><div class="sn">&lt;1<b>wk</b></div><div class="sl">Turnaround</div></div>
+    <div class="si"><div class="sn">100<b>%</b></div><div class="sl">U.S. Based</div></div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="about">
+    <div class="about-grid">
+      <div>
+        <div class="sec-eye">// My Story</div>
+        <div class="sec-h2">Why I Built <em>FLW</em></div>
+        <div class="body-text">I got tired of watching good, hardworking local business owners get taken advantage of by bloated agencies that charged a fortune and delivered mediocre results — if they delivered at all.</div>
+        <div class="body-text">So I built Fully Loaded Websites from the ground up: lean, skilled, and laser-focused on what actually moves the needle for local service businesses. No fluff. No agenda. Just common sense digital marketing that works.</div>
+        <div class="pull-quote">
+          <div class="pq-text">"Let's build something true, good, and beautiful — and help your business thrive in the process."</div>
+        </div>
+      </div>
+      <div>
+        <div class="sec-eye">// My Mission</div>
+        <div class="sec-h2">Serving <em>Local Business</em></div>
+        <div class="body-text">I serve conservative business owners who want marketing that fits their brand — not someone else's agenda. I believe in community, craftsmanship, and doing things right the first time.</div>
+        <div class="body-text">Every website I build gets my full attention and effort. I go the extra mile on every single project — because that's what my clients deserve, and that's what my faith calls me to do.</div>
+        <div class="body-text">I include 3 favorite Bible verses in the deep code of every site I build, blessing every business I touch online.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VALUES -->
+  <div class="values">
+    <div class="sec-eye">// What I Stand For</div>
+    <div class="sec-h2">Core <em style="color:#B01C1C;">Values</em></div>
+    <div class="val-grid">
+      <div class="val-card">
+        <div class="val-num">01 //</div>
+        <div class="val-title">Common Sense</div>
+        <div class="val-body">No jargon. No runaround. Plain English communication and strategies that actually make sense for your business.</div>
+      </div>
+      <div class="val-card" style="border-top-color:#B01C1C;">
+        <div class="val-num" style="color:#B01C1C;">02 //</div>
+        <div class="val-title">Faith & Integrity</div>
+        <div class="val-body">I operate with honesty, transparency, and a genuine desire to see your business succeed. All glory to God.</div>
+      </div>
+      <div class="val-card" style="border-top-color:#1B2A8A;">
+        <div class="val-num" style="color:#1B2A8A;">03 //</div>
+        <div class="val-title">Local First</div>
+        <div class="val-body">I believe in community and local business. Your success is my success — and it strengthens the community we both live in.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WHY WORK WITH EVAN -->
+  <div class="why">
+    <div style="position:relative;z-index:2;">
+      <div class="sec-eye">// Why Work With Me</div>
+      <div class="sec-h2">The FLW <em style="color:#B01C1C;">Difference</em></div>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><div class="why-dot"></div><div class="why-text"><b>I pick up the phone</b>No phone trees, no ticket systems. Call Evan directly and get a real answer.</div></div>
+      <div class="why-item"><div class="why-dot"></div><div class="why-text"><b>Fast turnaround</b>Most sites are live within one week. You'll never wait months for results.</div></div>
+      <div class="why-item"><div class="why-dot"></div><div class="why-text"><b>Real results, not vanity metrics</b>I focus on rankings, leads, and revenue — not impressions and clicks that don't convert.</div></div>
+      <div class="why-item"><div class="why-dot"></div><div class="why-text"><b>Conservative values</b>Marketing that fits your brand and worldview — not an agenda pushed on you by someone else.</div></div>
+      <div class="why-item"><div class="why-dot"></div><div class="why-text"><b>Full package, fair price</b>No hidden fees. Every build includes the ebook, press release, video, and Bible verses.</div></div>
+      <div class="why-item"><div class="why-dot"></div><div class="why-text"><b>AI-powered &amp; cutting edge</b>Every site is AI-optimized for search — built with the latest tools and tactics that work in 2026.</div></div>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS — GOLD SECTION -->
+  <div class="process">
+    <svg class="proc-deco" width="320" height="320" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#111" stroke-width="1"/>
+      <line x1="50" y1="4" x2="50" y2="34" stroke="#111" stroke-width="1"/>
+      <line x1="50" y1="66" x2="50" y2="96" stroke="#111" stroke-width="1"/>
+      <line x1="4" y1="50" x2="34" y2="50" stroke="#111" stroke-width="1"/>
+      <line x1="66" y1="50" x2="96" y2="50" stroke="#111" stroke-width="1"/>
+      <text x="50" y="57" text-anchor="middle" font-family="Oswald,sans-serif" font-size="28" font-weight="700" fill="#111" letter-spacing="2">FLW</text>
+    </svg>
+    <div style="position:relative;z-index:2;">
+      <div style="font-family:'Share Tech Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(0,0,0,.45);margin-bottom:8px;">// How It Works</div>
+      <div style="font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;color:#111;margin-bottom:4px;">Simple 4-Step Process</div>
+      <div style="font-size:12px;color:rgba(0,0,0,.5);margin-bottom:0;">From first call to live website — fast, clear, and painless.</div>
+    </div>
+    <div class="proc-steps">
+      <div class="proc-step">
+        <div class="proc-num">01</div>
+        <div class="proc-title">Call Evan</div>
+        <div class="proc-body">Pick up the phone and have a real conversation. No forms, no waiting rooms.</div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">02</div>
+        <div class="proc-title">Strategy Session</div>
+        <div class="proc-body">We map out your goals, market, and the best plan of attack for your business.</div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">03</div>
+        <div class="proc-title">Build &amp; Launch</div>
+        <div class="proc-body">Evan gets to work. Your site is live within one week, fully loaded and ready to rank.</div>
+      </div>
+      <div class="proc-step">
+        <div class="proc-num">04</div>
+        <div class="proc-title">Dominate &amp; Grow</div>
+        <div class="proc-body">Watch the leads come in. Evan stays in your corner as your business grows.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT CTA -->
+  <div class="contact">
+    <svg class="contact-deco" width="320" height="320" viewBox="0 0 100 100" style="opacity:.04;transform:translate(-50%,-50%);">
+      <circle cx="50" cy="50" r="46" fill="none" stroke="#DAA520" stroke-width="1"/>
+      <line x1="50" y1="4" x2="50" y2="34" stroke="#DAA520" stroke-width="1"/>
+      <line x1="50" y1="66" x2="50" y2="96" stroke="#DAA520" stroke-width="1"/>
+      <line x1="4" y1="50" x2="34" y2="50" stroke="#DAA520" stroke-width="1"/>
+      <line x1="66" y1="50" x2="96" y2="50" stroke="#DAA520" stroke-width="1"/>
+      <text x="50" y="57" text-anchor="middle" font-family="Oswald,sans-serif" font-size="28" font-weight="700" fill="#DAA520" letter-spacing="2">FLW</text>
+    </svg>
+    <div class="sec-eye" style="text-align:center;position:relative;z-index:2;">// Ready to Get Started?</div>
+    <div class="contact-h2">Let's Talk About Your <em>Business</em></div>
+    <div class="contact-sub">Call Evan directly — no gatekeepers, no waiting, just straight talk and real results.</div>
+    <div class="contact-info">
+      <div class="contact-item">
+        <div>
+          <div class="ci-label">Phone</div>
+          <div class="ci-val">(828) 818-5140</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div>
+          <div class="ci-label">Location</div>
+          <div class="ci-val">Asheville, NC Area</div>
+        </div>
+      </div>
+      <div class="contact-item">
+        <div>
+          <div class="ci-label">Availability</div>
+          <div class="ci-val">Mon – Sat, 8am – 7pm</div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-btns">
+      <div class="btn-red" style="font-size:13px;padding:13px 24px;">&#9990; Call Evan Now — (828) 818-5140</div>
+      <div class="btn-ghost" style="font-size:13px;padding:13px 24px;">View Portfolio →</div>
+    </div>
+    <div class="contact-sign">All Glory to God <b>☦</b></div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="flp"><span>Logo<br>Here</span></div>
+        <div>
+          <div class="fw">Fully <em>Loaded</em> Websites</div>
+          <div class="ft">// Common Sense Web Design &amp; Digital Marketing</div>
+        </div>
+      </div>
+      <div class="fsoc">
+        <div class="sp">X</div><div class="sp">Rumble</div><div class="sp">Truth Social</div>
+      </div>
+    </div>
+    <div class="flinks">
+      <div class="fl">Home</div><div class="fl">Meet Evan</div><div class="fl">Portfolio</div><div class="fl">Blog</div><div class="fl">FAQ</div><div class="fl">Solutions</div><div class="fl">Terms</div><div class="fl">Privacy</div><div class="fl">Accessibility</div><div class="fl">Disclaimer</div>
+    </div>
+    <div class="fbot">
+      <div class="fc">© 2026 Fully Loaded Websites | All Rights Reserved</div>
+      <div class="fg">All Glory to God ☦</div>
+    </div>
+  </div>
+
+</div>
