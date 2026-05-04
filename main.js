@@ -279,6 +279,38 @@ if (mobileDrawer) {
 }
 
 // ═══════════════════════════════════════════════════════
+// VIDEO HOVER PLAY
+// ═══════════════════════════════════════════════════════
+const videoContainer = document.getElementById('videoContainer');
+const promoVideo = document.getElementById('promoVideo');
+
+if (videoContainer && promoVideo) {
+  videoContainer.addEventListener('mouseenter', () => {
+    promoVideo.play().catch(() => {});
+  });
+  
+  videoContainer.addEventListener('mouseleave', () => {
+    promoVideo.pause();
+    promoVideo.currentTime = 0;
+  });
+  
+  // Also handle touch for mobile (tap to play/pause)
+  let isPlaying = false;
+  videoContainer.addEventListener('touchstart', (e) => {
+    e.preventDefault();
+    if (isPlaying) {
+      promoVideo.pause();
+      promoVideo.currentTime = 0;
+      document.getElementById('videoPlayOverlay').style.opacity = '1';
+    } else {
+      promoVideo.play().catch(() => {});
+      document.getElementById('videoPlayOverlay').style.opacity = '0';
+    }
+    isPlaying = !isPlaying;
+  });
+}
+
+// ═══════════════════════════════════════════════════════
 // PERFORMANCE: Log when JS is loaded
 // ═══════════════════════════════════════════════════════
 console.log('✓ FLW scripts loaded successfully');
