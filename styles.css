@@ -369,31 +369,7 @@ p{color:var(--muted);line-height:1.7;font-size:18px;}
   .final-btns{flex-direction:column;align-items:center;width:100%;}
   .final-btns .btn{width:100%;max-width:320px;justify-content:center;}
   
-  /* Footer - Major Centering Improvements */
-  .footer-inner{padding:40px 16px 24px;text-align:center;}
-  .footer-row1{flex-direction:column;align-items:center;text-align:center;gap:32px;}
-  
-  /* Footer Logo and Brand Section - Force Centering */
-  .footer-row1 > div{display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;width:100%;}
-  .footer-logo-box{margin:0 auto 12px!important;display:flex!important;align-items:center!important;justify-content:center!important;}
-  .footer-brand-title{text-align:center!important;font-size:20px;margin-bottom:4px;display:block;width:100%;}
-  .footer-brand-sub{text-align:center!important;font-size:13px;display:block;width:100%;}
-  
-  /* Footer Contact Info */
-  .footer-row1 > div > div{text-align:center!important;margin-left:auto!important;margin-right:auto!important;}
-  
-  /* Footer Social Section */
-  .socials{justify-content:center!important;gap:8px;display:flex!important;flex-wrap:wrap;width:100%;margin:0 auto;}
-  .social-pill{font-size:16px;padding:6px 12px;}
-  
-  /* Footer Navigation */
-  .footer-nav{justify-content:center!important;padding:24px 0 20px;gap:12px 16px;text-align:center!important;}
-  .footer-link{font-size:18px;text-align:center;}
-  
-  /* Footer Bottom */
-  .footer-bottom{flex-direction:column!important;align-items:center!important;text-align:center!important;gap:12px;padding-top:20px;justify-content:center!important;}
-  .footer-copy{font-size:14px;text-align:center!important;line-height:1.6;display:block;width:100%;margin:0 auto;}
-  .footer-glory{font-size:16px;text-align:center!important;display:block;width:100%;margin:0 auto;}
+  /* Footer mobile layout: footer-mobile.css (shared, all pages) */
   
   /* General Page Sections */
   .page-hero{padding-top:var(--nav-h);}
@@ -442,20 +418,14 @@ p{color:var(--muted);line-height:1.7;font-size:18px;}
   .hero{padding-top:var(--nav-h);}
   .hero-h1{font-size:clamp(22px,6vw,28px);}
   
-  /* Footer adjustments - Extra centering for small screens */
-  .footer-inner{padding:32px 12px 20px;text-align:center!important;}
-  .footer-row1{gap:24px;}
-  .footer-row1 > div{width:100%!important;display:flex!important;flex-direction:column!important;align-items:center!important;text-align:center!important;}
-  .footer-logo-box{width:80px!important;height:80px!important;min-width:80px!important;min-height:80px!important;margin:0 auto 12px!important;}
-  .footer-brand-title{font-size:18px;text-align:center!important;width:100%;}
-  .footer-brand-sub{font-size:12px;text-align:center!important;width:100%;}
-  .footer-link{font-size:16px;text-align:center!important;}
-  .footer-copy{font-size:13px;text-align:center!important;width:100%;display:block;}
-  .footer-glory{font-size:15px;text-align:center!important;width:100%;display:block;}
-  .footer-nav{text-align:center!important;justify-content:center!important;}
-  .footer-bottom{text-align:center!important;justify-content:center!important;align-items:center!important;}
+  /* Footer: footer-mobile.css */
+  .footer-logo-box{width:80px!important;height:80px!important;min-width:80px!important;min-height:80px!important;}
+  .footer-brand-title{font-size:18px;}
+  .footer-brand-sub{font-size:12px;}
+  .footer-link{font-size:16px;}
+  .footer-copy{font-size:13px;}
+  .footer-glory{font-size:15px;}
   .social-pill{font-size:14px;padding:5px 10px;}
-  .socials{justify-content:center!important;margin:0 auto;display:flex!important;}
   
   /* Container even tighter */
   .container{padding-inline:12px;}

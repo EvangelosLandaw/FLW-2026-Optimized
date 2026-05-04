@@ -1,0 +1,128 @@
+/* Shared footer layout — mobile / small screens (all FLW pages).
+   Load after styles.css or page <style> so these rules apply last. */
+
+@media (max-width: 768px) {
+  .footer-inner {
+    text-align: center !important;
+    padding-top: 48px !important;
+  }
+
+  /* First block inside footer: .footer-row1 (most pages) or inline flex wrapper (blog posts) */
+  .footer .footer-inner > div:first-of-type {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 28px !important;
+    width: 100% !important;
+  }
+
+  .footer .footer-inner .footer-row1 {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  /* Brand + “Follow” columns — not .socials (needs row for pills) */
+  .footer .footer-inner > div:first-of-type > div:not(.socials) {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .footer .footer-inner > div:first-of-type .socials {
+    flex-direction: row !important;
+    align-items: center !important;
+  }
+
+  .footer-logo-box {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    margin-bottom: 12px !important;
+  }
+
+  .footer-brand-title,
+  .footer-brand-sub {
+    text-align: center !important;
+    width: 100% !important;
+  }
+
+  .footer-brand-title {
+    font-size: 20px;
+    margin-bottom: 4px;
+  }
+
+  .footer-brand-sub {
+    font-size: 13px;
+  }
+
+  .socials {
+    justify-content: center !important;
+    width: 100% !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .footer-nav {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .footer-link {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .footer-bottom {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+
+  .footer-copy,
+  .footer-glory {
+    text-align: center !important;
+    width: 100% !important;
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-inner {
+    padding-top: 44px !important;
+  }
+
+  .footer-logo-box {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .footer-link {
+    font-size: 16px;
+  }
+
+  .footer-brand-title {
+    font-size: 18px;
+  }
+
+  .footer-brand-sub {
+    font-size: 12px;
+  }
+
+  .footer-copy {
+    font-size: 13px;
+  }
+
+  .footer-glory {
+    font-size: 15px;
+  }
+}
