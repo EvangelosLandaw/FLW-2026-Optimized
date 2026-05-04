@@ -279,34 +279,25 @@ if (mobileDrawer) {
 }
 
 // ═══════════════════════════════════════════════════════
-// VIDEO HOVER PLAY
+// VIDEO CLICK TO PLAY
 // ═══════════════════════════════════════════════════════
 const videoContainer = document.getElementById('videoContainer');
 const promoVideo = document.getElementById('promoVideo');
+const playOverlay = document.getElementById('videoPlayOverlay');
 
-if (videoContainer && promoVideo) {
-  videoContainer.addEventListener('mouseenter', () => {
-    promoVideo.play().catch(() => {});
-  });
-  
-  videoContainer.addEventListener('mouseleave', () => {
-    promoVideo.pause();
-    promoVideo.currentTime = 0;
-  });
-  
-  // Also handle touch for mobile (tap to play/pause)
-  let isPlaying = false;
-  videoContainer.addEventListener('touchstart', (e) => {
-    e.preventDefault();
-    if (isPlaying) {
-      promoVideo.pause();
-      promoVideo.currentTime = 0;
-      document.getElementById('videoPlayOverlay').style.opacity = '1';
-    } else {
+if (videoContainer && promoVideo && playOverlay) {
+  videoContainer.addEventListener('click', () => {
+    if (promoVideo.paused) {
       promoVideo.play().catch(() => {});
-      document.getElementById('videoPlayOverlay').style.opacity = '0';
+      playOverlay.style.opacity = '0';
+    } else {
+      promoVideo.pause();
+      playOverlay.style.opacity = '1';
     }
-    isPlaying = !isPlaying;
+  });
+  
+  promoVideo.addEventListener('ended', () => {
+    playOverlay.style.opacity = '1';
   });
 }
 
