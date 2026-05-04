@@ -1,0 +1,5 @@
+.wrangler/
+.cloudflare-build.log
+node_modules/
+fullyloadedwebsites/node_modules/
+fullyloadedwebsites/.next/
